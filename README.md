@@ -3,7 +3,6 @@
 End-to-end machine-learning project on a real telemarketing dataset from a Portuguese bank: exploratory analysis, leakage-aware preprocessing, unsupervised analysis (PCA, K-Means, GMM), ten model configurations compared with cross-validation, and a tuned gradient-boosting model evaluated on a held-out test set.
 
 Final project for the *Machine Learning* course (2025–26), Facultat d'Informàtica de Barcelona (UPC).
-Full write-up: [`reports/ML_Final_Project_Report.pdf`](reports/ML_Final_Project_Report.pdf)
 
 ## Highlights
 
@@ -74,7 +73,7 @@ Data-quality findings: 12 duplicate rows (removed); no `NaN`, but `"unknown"` ac
 | SVM | 0.404 | 0.771 | 0.717 | 0.589 |
 | Dummy (most frequent) | 0.113 | 0.500 | 0.887 | 0.470 |
 
-The full table (all four dataset variants) is in Appendix E of the report.
+The notebook evaluates every model on all four dataset variants (removed, clipped, and their PCA versions); the table above shows the clipped one, which was selected.
 
 - Linear models, LDA and the MLP are all within 0.01 AUPR of each other. The decision boundary is mostly linear.
 - Gradient boosting is best, but its margin over the linear models is small, and Optuna over grid search (0.448 vs 0.446) is within noise.
@@ -118,8 +117,6 @@ bank-marketing-term-deposit/
 │   └── bank-additional-full.csv                   # UCI Bank Marketing (CC BY 4.0)
 ├── notebooks/
 │   └── bank_marketing_classification.ipynb        # full pipeline, saved with outputs
-├── reports/
-│   └── ML_Final_Project_Report.pdf                # technical report (23 pages)
 ├── images/                                        # figures used in this README
 ├── requirements.txt
 └── README.md
