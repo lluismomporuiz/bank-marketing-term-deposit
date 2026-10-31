@@ -1,0 +1,10 @@
+numpy
+pandas
+matplotlib
+seaborn
+dython
+scikit-learn>=1.8,<1.10
+imbalanced-learn
+optuna
+ipython
+jupyterlab
